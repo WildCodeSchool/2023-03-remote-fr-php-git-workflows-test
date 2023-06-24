@@ -15,5 +15,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           host: ${{ secrets.SSH_HOST }}
           password: ${{ secrets.SSH_PASSWORD }}
-          envs: true
-          script: cd && cd git-workflows && bash ./script.sh ${{ fromJson(vars) }}
+          script: cd && cd git-workflows && bash ./script.sh ${{ toJSON(vars) }}
