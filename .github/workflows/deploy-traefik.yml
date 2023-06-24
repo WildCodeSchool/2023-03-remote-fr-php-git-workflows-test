@@ -16,4 +16,4 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           password: ${{ secrets.SSH_PASSWORD }}
           envs: true
-          script: cd && cd git-workflows && bash ./script.sh ${{ github.event.repository.name }} ${{ vars.PROJECT_NAME }} | printenv
+          script: cd && cd git-workflows && bash ./script.sh ${{ toJSON(secrets) }} ${{ toJSON(vars) }}
