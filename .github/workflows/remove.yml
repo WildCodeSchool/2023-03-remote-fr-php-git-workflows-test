@@ -1,8 +1,6 @@
 name: Remove-from-Traefik
 
-on: 
-  push:
-    branches: []
+on:
   workflow_dispatch:
 
 jobs:
